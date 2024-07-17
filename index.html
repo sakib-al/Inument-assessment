@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- Copy from Container Class -->
+    <div class="container">
+      <style>
+        .product-list {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          padding: 0;
+          gap: 10px;
+        }
+        .product-list li > a {
+          text-decoration: none;
+          color: #000;
+        }
+        .product-box .product-img > img {
+          width: 100%;
+          height: auto;
+        }
+        .product-box .product-details,
+        .product-box .product-price {
+          font-size: 14px;
+          font-weight: 400;
+          margin-bottom: 5px;
+        }
+        .product-box .product-price span {
+          color: #fc5732;
+        }
+        .add-to-bag {
+          background-color: #fc5732;
+          color: #fff;
+          padding: 5px 15px;
+          font-size: 13px;
+          border: 0;
+          cursor: pointer;
+          display: block;
+          margin: auto;
+          margin-top: 10px;
+        }
+
+      </style>
+
+      <ul class="product-list">
+        <li>
+          <a
+            href="https://www.myer.com.au/p/converse-chuck-taylor-all-star-hi-sneaker-826545340-1"
+            class="product-box"
+            data-product-id="826542730"
+          >
+            <div class="product-img">
+              <img
+                class="dy-recommendation__product-image"
+                src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/205/3815/7/8/826545340/826545340_1_720x928.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <strong>Converse</strong>Chuck Taylor All Star Mens Hi-Top Sneaker
+              in White
+            </div>
+            <p class="product-price">$130.00</p>
+          </a>
+          <button class="add-to-bag" onclick="addToBag(event)">
+            Add to bag
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://www.myer.com.au/p/chuck-taylor-astar-hi-inf-447108490"
+            class="product-box"
+            data-product-id="447075820"
+          >
+            <div class="product-img">
+              <img
+                class="dy-recommendation__product-image"
+                src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/70/711/8350/100/1/447108490/447108490_1_720x928.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <strong>Converse</strong> Chuck Taylor All Star High Infant
+              Sneakers in Black
+            </div>
+            <p class="product-price">$69.95</p>
+          </a>
+          <button class="add-to-bag" onclick="addToBag(event)">
+            Add to bag
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://www.myer.com.au/p/chuck-taylor-astar-hi-yth-447108040"
+            class="product-box"
+            data-product-id="447108040"
+          >
+            <div class="product-img">
+              <img
+                class="dy-recommendation__product-image"
+                src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/70/711/8350/100/1/447108040/447108040_1_720x928.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <strong>Converse</strong> Chuck Taylor Astar Hi Yth in Black
+            </div>
+            <p class="product-price">$79.95</p>
+          </a>
+          <button class="add-to-bag" onclick="addToBag(event)">
+            Add to bag
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://www.myer.com.au/p/converse-chuck-taylor-all-star-hi-top-shoe-in-beige"
+            class="product-box"
+            data-product-id="114318010"
+          >
+            <div class="product-img">
+              <img
+                class="dy-recommendation__product-image"
+                src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/205/3815/7/8/978461110/978461110_1_720x928.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <strong>Converse</strong> Chuck Taylor All Star Hi Top Shoe in
+              Beige
+            </div>
+            <p class="product-price">$100.00</p>
+          </a>
+          <button class="add-to-bag" onclick="addToBag(event)">
+            Add to bag
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://www.myer.com.au/p/converse-chuck-taylor-all-star-malden-street-crafted-patchwork-shoes-in-red"
+            class="product-box"
+            data-product-id="114311350"
+          >
+            <div class="product-img">
+              <img
+                class="dy-recommendation__product-image"
+                src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/205/3815/7/8/114311350/114311350_1_720x928.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <strong>Converse</strong> Chuck Taylor All Star Malden Street
+              Crafted
+            </div>
+            <p class="product-price">
+              <p class="product-price">
+                <del>$130.00</del>
+                <span>$78.00</span>
+              </p>
+            </p>
+          </a>
+          <button class="add-to-bag" onclick="addToBag(event)">
+            Add to bag
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://www.myer.com.au/p/converse-chuck-taylor-all-star-fall-tone-hi-boot-in-eternal-earth"
+            class="product-box"
+            data-product-id="826545340"
+          >
+            <div class="product-img">
+              <img
+                class="dy-recommendation__product-image"
+                src="https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/40/205/3815/7/8/826545340/826545340_1_720x928.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <strong>Converse</strong> Chuck Taylor All Star Fall Tone Hi Boot
+              in Eternal Earth
+            </div>
+            <p class="product-price">
+              <p class="product-price">
+                <del>$130.00</del>
+                <span>$70.00</span>
+              </p>
+            </p>
+          </a>
+          <button class="add-to-bag" onclick="addToBag(event)">
+            Add to bag
+          </button>
+        </li>
+      </ul>
+      <script>
+        var url = "https://api-online.myer.com.au/v2/cart/add";
+        var cartBag = document.querySelector('[data-automation="header-bag"]');
+        var cart_count = cartBag.innerHTML.trim();
+
+        function addToBag(event) {
+          var product_container = event.target.closest("li");
+
+          if (product_container) {
+            var product_box = product_container.querySelector("a.product-box");
+
+            if (product_box) {
+              var productId = product_box.getAttribute("data-product-id");
+              const data = {
+                orderItem: [
+                  {
+                    partNumber: productId,
+                    quantity: "1.0",
+                    itemAttributes: [],
+                  },
+                ],
+              };
+
+              console.log(data);
+
+              fetch(url, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  if (data) {
+                    cartBag.innerHTML = data.cartCount;
+                  }
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+              })
+            }
+          }
+        }
+      </script>
+    </div>
+    <!-- End of Content -->
+  </body>
+</html>
